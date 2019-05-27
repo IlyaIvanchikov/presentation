@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		</head>
+		<body>
+		<div class="reveal" style="background: url(./img/1.jpg)">
+			<div class="slides" >
+				<section>
+					<h1 style="color:black" >LODASH</h1>
+				</section>
+				<section>
+				<section>
+					<h3>Introduction</h3>
+					<p style="margin-bottom:0px; padding-bottom:0px;">My name is <b>Ilya Ivanchikov</b></p>
+					<p>
+						<img width="330px" height="510" data-src="./img/20190516_134242.jpg" alt="My photo" style="margin-top:0px; padding-top:0px;">
+					</p>
+				</section>
+				<section>
+					<h2>About me</h2>
+					<ul>
+						<li>I am 23 years old</li>
+						<li>Officer of the Armed Forces of the Republic of Belarus</li>
+					</ul>
+				</section>
+				</section>
+				<section>
+					<h2>Questions</h2>
+					<ul>
+						<li class="fragment fade-right">What is a LODASH library?</li>
+						<li class="fragment fade-right">Library Installation options</li>
+						<li class="fragment fade-right">The “each” method in LODASH</li>
+					</ul>
+				</section>
+				<section>
+				<section>
+					<h3>What is the LODASH library?</h3>
+					<img data-src="./img/2.png" alt="Lodash">
+				</section>
+				<section>
+					<p>LODASH is the library with a huge number of functions for working with various data structures.</p>
+				</section>
+				<section>
+					<p>LODASH is the JavaScript utility library that helps programmers write more compact and easy-to-maintain JavaScript code.</p>
+					<blockquote>
+							&ldquo;Work smart, not hard.&rdquo;
+					</blockquote>
+				</section>
+				</section>
+				<section>
+				<section>
+					<h3>Library Installation options</h3>
+					<img data-src="./img/2.png" alt="Lodash">
+				</section>
+				<section>
+					<h4>The first installation option</h4>
+					<p>On the <a href="https://lodash.com/" target="_blank">LODASH</a> website you can select the <a href="https://developer.mozilla.org/en-US/" target="_blank">SDN</a> link in the download section and then direct links to the JS file will appear.</p>
+				<pre><section data-markdown > 
+				<textarea data-template> 
+				<script src="https://cdn.jsdelivr.net/lodash/4.10.0/lodash.js"></script> 
+				</textarea> 
+				</section></pre>
+				</section>
+				<section>
+					<h4>CHECK</h4>
+				<section data-markdown > 
+				<textarea data-template> 
+					Such a record will return "true" in the line.
+					_.isArray([1,2])
+				</textarea>
+				</section>
+				</section>
+				</section>
+				<section>
+				<section>
+					<h4>Second installation option</h4>
+				</section>
+				<section>
+					<p>Need to download the file lodash.js and connect it next to the html page. The connection path will be as follows</p>
+				<section data-markdown > 
+				<textarea data-template> 
+					<script src="lodash.js"></script>
+				</textarea>
+				</section>
+				</section>
+				</section>
+				<section>
+				<section>
+					<h4>Third installation option</h4>
+				</section>
+				<section>
+					<p>There is an index .html file in which the script is connected:</p>
+				<section data-markdown > 
+				<textarea data-template> 
+					<script src="bundle.js"></script>
+				</textarea>
+				</section>
+					<p>The following lines are written in the entry.js file</p>
+				<section data-markdown > 
+				<textarea data-template> 
+					var _ = require('lodash');
+					console.log(_.isEqual(1, 2));
+				</textarea>
+				</section>
+				</section>
+				</section>
+				<section>
+				<section>
+					<h3>The “each” method in LODASH</h3>
+					<img data-src="./img/2.png" alt="Lodash">
+				</section>
+				<section>
+					<p>Natively “forEach” is commonly uses like this.</p>
+				<section data-markdown > 
+				<textarea data-template> 
+					[1,2].forEach(function (item) {
+					console.log(item);
+					});								  
+				</textarea>
+				</section>
+					<p>Now the same with “each” LODASH”.</p>
+				<section data-markdown > 
+				<textarea data-template> 
+					_.each([1, 2], function (item) {
+					console.log(item);
+					});							  
+				</textarea>
+				</section>
+				</section>
+				<section data-markdown>
+				<textarea data-template>
+					#### For example there is an object
+					var a = {id: 1, name: "some name"}.
+				</textarea>
+				</section>
+				<section data-markdown>
+				<textarea data-template>
+					#### If you try the following
+					a.forEach.
+				</textarea>
+				</section>
+				<section data-markdown>
+				<textarea data-template>
+					##### The first displayed parameter is the object, the second displayed parameter is the function
+					* _.each(a, function (item) {
+					* console.log(item);
+					})		
+				</textarea>
+				</section>
+				<section data-markdown>
+				<textarea data-template>
+					##### Now there will be an example that very often has to be used on real projects.
+					* var arr = [];
+					* _.each(a, function (item) {
+					 arr.push(item);
+					});												
+				</textarea>
+				</section>
+				</section>
+				<section data-markdown>
+				<textarea data-template>
+					##### Thank you for your attention.										
+				</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				],
+				markdown: [
+				{smartypants: true}
+				]}
+			);
+		</script>
+	</body>
+</html>
